@@ -1,0 +1,282 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="300dp"
+    android:background="#ff888888"
+    android:paddingLeft="2dp"
+    android:paddingTop="0dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="Sort"
+        android:textColor="#ffffffff"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitle"
+        android:background="#ff111111">
+
+        <ImageView
+            android:id="@+id/chkName"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkNameText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/chkName"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Name"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/chkFileSize"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkName"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkFileSizeText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkNameText"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chkFileSize"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Size (Files Only)"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/chkFolderItems"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFileSize"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkFolderItemsText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFileSizeText"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chkFolderItems"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Contents (Folders Only)"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/chkModDate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFolderItems"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkModDateText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFolderItemsText"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chkModDate"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Modification Date"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/txtTitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chkModDate"
+            android:layout_marginTop="5dp"
+            android:background="#ff888888"
+            android:clickable="true"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:text="Grouping"
+            android:textColor="#ffffffff"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/chkCombined"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/txtTitle2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkCombinedText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/txtTitle2"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/chkCombined"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Sorted"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/chkFolderFirst"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkCombined"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkFolderFirstText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkCombinedText"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chkFolderFirst"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Folder First"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/chkFileFirst"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFolderFirst"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected" />
+
+        <TextView
+            android:id="@+id/chkFileFirstText"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/chkFolderFirstText"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chkFileFirst"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="File First"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+
+        <RelativeLayout
+            android:id="@+id/relOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/back_button_flat">
+
+            <ImageView
+                android:id="@+id/btnSort"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_sort" />
+
+            <ImageView
+                android:id="@+id/chkReverse"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_unselected" />
+
+            <TextView
+                android:id="@+id/chkReverseText"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/chkReverse"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:text="Reverse"
+                android:textColor="#ffffffff"
+                android:textSize="13dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

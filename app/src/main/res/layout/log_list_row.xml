@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:id="@+id/txtLogname"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="2019-01-01"
+        android:textColor="#ffffffff"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/imgCheckbox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_selected" />
+
+    <TextView
+        android:id="@+id/txtSize"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/imgCheckbox"
+        android:layout_toRightOf="@id/txtLogname"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="right|center_vertical"
+        android:text="888,888.88 M"
+        android:textColor="#ffaaaaaa"
+        android:textSize="13dp" />
+
+    <!--<View
+        android:id="@+id/viewSepBottom"
+        android:visibility="visible"
+        android:background="#ff888888"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />-->
+
+</RelativeLayout>

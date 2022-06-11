@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff888888"
+    android:paddingLeft="2dp"
+    android:paddingTop="0dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="GIF Folder"
+        android:textColor="#ffffffff"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitle"
+        android:background="#ff111111">
+
+        <RelativeLayout
+            android:id="@+id/relOptions"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/back_button_flat">
+
+            <ImageView
+                android:id="@+id/btnPrevPage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_fast_rewind" />
+
+            <ImageView
+                android:id="@+id/btnNextPage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/btnPrevPage"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_fast_forward" />
+
+            <TextView
+                android:id="@+id/txtItems"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_vertical"
+                android:text="888,888 entries"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtPages"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/txtItems"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="888,888.88 M"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/relOptions" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="#ff888888"
+    android:paddingLeft="2dp"
+    android:paddingTop="0dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="Logs"
+        android:textColor="#ffffffff"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTitle"
+        android:background="#ff111111">
+
+        <RelativeLayout
+            android:id="@+id/relOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/back_button_flat">
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_delete_forever" />
+
+            <ImageView
+                android:id="@+id/btnUncheckAll"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="-1dp"
+                android:layout_toLeftOf="@id/btnDelete"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_unselected" />
+
+            <ImageView
+                android:id="@+id/btnCheckAll"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="-1dp"
+                android:layout_toLeftOf="@id/btnUncheckAll"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_selected" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toLeftOf="@id/btnCheckAll"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_vertical"
+                android:text="888,888 items (888,888.88 M)"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/txtTotal"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toLeftOf="@id/btnCheckAll"
+                android:fontFamily="sans-serif-condensed"
+                android:text="888,888 selected (888,888.88 M)"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvwLogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/relOptions"
+            android:divider="@null"
+            android:fastScrollEnabled="true"
+            android:listSelector="@drawable/selector_list_main" />
+    </RelativeLayout>
+
+</RelativeLayout>

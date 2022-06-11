@@ -1,0 +1,289 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff111111">
+
+    <TextView
+        android:id="@+id/txtRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="-2dp"
+        android:background="@drawable/selector_back_path_root"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="100dp"
+        android:paddingLeft="8dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="SDcard"
+        android:textColor="#ffffffff"
+        android:textSize="12dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/hScrollPathTree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dp"
+        android:layout_toRightOf="@id/txtRoot"
+        android:background="#ff111111"
+        android:paddingLeft="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/lnrPathTree"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:orientation="horizontal"
+            android:paddingRight="5dp"></LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/hScrollPathTree"
+        android:layout_marginLeft="-2dp"
+        android:layout_toRightOf="@id/txtRoot"
+        android:background="#ff999999" />
+
+    <RelativeLayout
+        android:id="@+id/relRootSize"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:layout_below="@id/txtRoot"
+        android:layout_marginTop="-7dp">
+
+        <View
+            android:id="@+id/viewRootSizeFill"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#ff555555" />
+
+        <TextView
+            android:id="@+id/txtRootSize"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:paddingRight="2dp"
+            android:text="Root name (1G/2G)"
+            android:textColor="#ffffffff"
+            android:textSize="6dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSep2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/relRootSize"
+        android:background="#ff999999" />
+
+    <RelativeLayout
+        android:id="@+id/relDock"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/viewSep2"
+        android:background="#ff222222"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/viewSep3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ff999999" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvwContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relDock"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fastScrollEnabled="true"
+        android:listSelector="@drawable/selector_list_main"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp" />
+
+    <TextView
+        android:id="@+id/txtFolderInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_below="@id/relDock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/back_folder_info"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
+        android:text="Sub-folders: 7, Files: 8"
+        android:textColor="#ffffffff"
+        android:textSize="8dp" />
+
+    <LinearLayout
+        android:id="@+id/lnrMenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#dd111111"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/btnMenuNewFolder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_folder_new" />
+
+        <ImageView
+            android:id="@+id/btnSelMenuCopy"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_copy"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnDestMenuNewFolder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_folder_new"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnMenuSort"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_sort" />
+
+        <ImageView
+            android:id="@+id/btnSelMenuMove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_cut"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnMenuTools"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_settings" />
+
+        <ImageView
+            android:id="@+id/btnSelMenuSelectAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_selected"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnDestMenuPaste"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_paste"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnMenuTabs"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_view_carousel" />
+
+        <ImageView
+            android:id="@+id/btnSelMenuUnselectAll"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_unselected"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnMenuOthers"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_menu" />
+
+        <ImageView
+            android:id="@+id/btnDestMenuCancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_menu"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_cancel"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

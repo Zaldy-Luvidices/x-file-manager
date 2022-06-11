@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="#ff888888"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingTop="0dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="Confirm"
+        android:textColor="#ffffffff"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:background="#ff111111">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:text="Confirmation messagebfjffj fjfj fkdkskjdjdjffjffnfnd fjdj here..."
+            android:textColor="#ffffffff"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/relOptions"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txtMessage"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/back_button_flat">
+
+            <ImageView
+                android:id="@+id/btnYes"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_forward" />
+
+            <ImageView
+                android:id="@+id/btnNo"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="-1dp"
+                android:layout_toLeftOf="@id/btnYes"
+                android:background="@drawable/selector_button_flat"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_cancel" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
