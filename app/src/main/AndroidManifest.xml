@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.x.manager">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="xManager"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <activity
+            android:name=".view.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="xManager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dialog.TextInputDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+        <activity
+            android:name=".dialog.LogsDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+        <activity
+            android:name=".dialog.SortDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+        <activity
+            android:name=".dialog.ConfirmYesNoDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+        <activity
+            android:name=".dialog.MenuDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+        <activity
+            android:name=".view.LogDataActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".dialog.ProgressDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.DialogLock" />
+        <activity
+            android:name=".dialog.PasteOptionsDialog"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SRC.Dialog" />
+    </application>
+
+</manifest>
